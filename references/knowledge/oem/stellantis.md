@@ -107,3 +107,8 @@ TDR 标准交付物编号（15 项）：
 10. **CTS vs 性能标准冲突**：同一参数在 CTS 和 PF 标准中可能有不同值，规则：CTS 应用参数 > PF 通用标准，但需双源标注
 11. **Product Card 常缺失**：传感器类零件（NTC/WiF）的具体参数由 Product Card 定义，PF/CTS 中仅为示例值
 12. **CS.00056 环境分类**：电气/电子零部件需按 CS.00056 进行环境分类（Device type, FC, CI, TC, TN, V, A, SE, IP 等级）
+13. **OLE对象图片提取**：部分OLE对象包含JPG图片，需查找JPEG签名`\xff\xd8\xff`定位数据起始
+14. **TDR模板处理**：ED&D Cost模板复杂包含多sheet，注意不破坏合并单元格结构
+15. **TDR和CTS嵌入分目录提取**：两个 DOCX 嵌入文件均含 `word/embeddings/Microsoft_Excel_Worksheet.xlsx`，必须用独立子目录分别提取，否则 TDR 的 ED&D 模板会被 CTS 的 SVP 模板覆盖
+16. **SVP 模板结构（3 sheets）**：`FCA (EN)` / `FCA (EN)(2)` / `FCA (EN)(3)` 分别对应环境+物理、机械+功能、安全+耐久共30个测试项；版本日期 2021-04-19 为旧版，需更新为当前 PF 版本日期
+17. **PF.90197 最新版本**：Change Level C，2025-04-03，已 Harmonized（PF.90197<S,E>）；标准作者：Fernando Sada (NA) + Bruno Le Moine (EMEA)
